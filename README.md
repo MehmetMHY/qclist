@@ -37,12 +37,18 @@
         ]
         ```
 4) After you created/edited your json files in **targets/**, please take a look at the **config.json** file. In this file, please set the *open_command* value eqaul to your operating system's "open" command. The open command is a commend used by the terminal to open a file or directory though your OS's gui. Here are some of the "open" commands for certain operating systems:
-    - MacOS: "open:
+    - MacOS: "open"
     - Ubuntu: "xdg-open"
 5) After setting your operating system's "open" command in the config.json file, you can change the *print_source_info* from true to false if you don't want the terminal to print stuff when qclist is running.
 6) After all these steps, run the main.py script to run qclist:
     ```
     python3 main.py
     ```
-7) (optional) If you want, you can make an alias for qclist and save that alias to your zshrc or bashrc file.
+7) (optional) If you want, you can make an alias for qclist and save that alias to your zshrc or bashrc file. Here is a possible alias/command you can add to your zshrc/bashrc file:
+    ```
+    qclist () {
+        python3 <path_to_dir>/qclist/main.py
+        exit
+    }
+    ```
 
